@@ -5,6 +5,10 @@
     list-style: none;
 }
 
+body{
+    background: #ddd;
+}
+
 .nav-bar{
     display: flex;
     align-items: center;
@@ -12,6 +16,8 @@
     padding: 10px 20px;
     max-height: 100px;
     box-shadow: 0px 0px 2px;
+    max-width: 100vw;
+    background: #fff;
 }
 
 .logo-image{
@@ -29,6 +35,7 @@
     align-items: center;
     justify-content: center;
     gap: 15px;
+    display: none;
 }
 
 .inner-list{
@@ -49,9 +56,9 @@
 }
 
 .team{
-    width: 100vw;
-    background: #ddd;
-    height: calc(100vh - 100px);
+    max-width: 100vw;
+    min-height: calc(100vh - 100px);
+    height:calc(100vh - 100px) ;
     display: flex;
 }
 
@@ -209,6 +216,10 @@
     position: absolute;
 }
 
+.box1{
+    right: 20px;
+}
+
 .box1::after{
     content: '';
     position: absolute;
@@ -223,12 +234,16 @@
 .box1::before{
     content: '';
     position: absolute;
-    width: 75px;
+    width: 35px;
     height: 2px;
     background: #6783ff;
     bottom: -26px;
     left: 95px;
     transform: rotate(0deg);
+}
+
+.box1,.box2{
+    bottom: 163px;
 }
 
 .box2{
@@ -259,7 +274,7 @@
 }
 
 .box3{
-    bottom: 0px;
+    right: 20px;
     color: #1eb300;
 }
 
@@ -277,7 +292,7 @@
 .box3::before{
     content: '';
     position: absolute;
-    width: 75px;
+    width: 45px;
     height: 2px;
     background: #1eb300;
     top: -26px;
@@ -286,9 +301,13 @@
 }
 
 .box4{
-    bottom: 0px;
+    --clr:#078781;
     left: 50px;
-    color: #1fcfc7;
+    color: var(--clr);
+}
+
+.box3, .box4{
+    top: 163px;
 }
 
 .box4::after{
@@ -296,7 +315,7 @@
     position: absolute;
     width: 2px;
     height: 26px;
-    background: #1fcfc7;
+    background: var(--clr);
     top: -26px;
     right: 70px;
     transform: rotate(-15deg);
@@ -307,7 +326,7 @@
     position: absolute;
     width: 85px;
     height: 2px;
-    background: #1fcfc7;
+    background: var(--clr);
     top: -26px;
     right: 75px;
     transform: rotate(0deg);
@@ -343,4 +362,104 @@
     align-items: center;
     justify-content: center;
     font-size: 24px;
+}
+
+.content-container{
+    flex-direction: column;
+    gap: 20px;
+}
+
+.title{
+    font-size: 50px;
+    color: #424242;
+    text-shadow: 3px 3px 2px #33bb4e;
+}
+
+.team-name{
+    font-size: 30px;
+    font-weight: 900;
+    font-family: cursive;
+    text-shadow: 2px 2px 2px #ff6767;
+}
+
+.moto{
+    display: inline;
+    padding: 10px 20px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+@media screen and (max-width:427px) {
+    .team{
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .inner-section{
+        width: 100vw;
+        position: relative;
+        flex-direction: column;
+        left: 0;
+        top: 150px;
+    }
+
+    .content-container{
+        position: absolute;
+        top: -140px;
+    }
+
+    .moto{
+        display: none;
+    }
+
+    .team-div{
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        flex-wrap: nowrap;
+    }
+
+    .team-member{
+        left: 0px;
+        top: 0;
+        min-height: 300px;
+        width: 100%;
+        background: var(--bg);
+    }
+
+    .member2,.member4{
+        bottom: 0;
+        left: 15px;
+    }
+
+    .member1,.member3{
+        bottom: 0;
+        right: 15px;
+    }
+
+    .message-box {
+        min-width: 290px;
+        height: 120px;
+    }
+
+    .box1::before, .box3::before{
+        width: 55px;
+    }
+
+    .box2::before, .box4::before{
+        width: 115px;
+    }
+
+    .member-div::before {
+        width: 100%;
+        height: 100%;
+    }
+
+    .social-icon{
+        height: 100%;
+        top: 0;
+    }
+
 }

@@ -1,0 +1,215 @@
+a {
+  text-decoration: none;
+}
+
+.projects {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  min-height: calc(100vh - 100px);
+  left: 0;
+  padding: 15px;
+  max-width: 100vw;
+}
+
+.projects-list {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.project-card {
+  padding: 10px;
+  min-width: 300px;
+  max-width: calc(100vw - 10px);
+  display: flex;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #fff;
+  width: 600px;
+}
+
+.card-image {
+  max-width: 300px;
+}
+
+.card-image img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.card-content {
+  max-width: 310px;
+  padding: 0px 10px;
+  position: relative;
+}
+
+.card-title {
+  color: #474747;
+  font-weight: 600;
+}
+
+.card-owner {
+  margin-top: 10px;
+}
+
+.owner-name {
+  font-weight: 900;
+}
+
+.description {
+  width: 100%;
+  margin-top: 7px;
+}
+
+.detail {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+}
+
+.detail label {
+  min-width: 130px;
+}
+
+.external-list {
+  padding: 5px 10px;
+  border-radius: 3px;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.repo-link {
+  background: #474747;
+  color: #fff;
+}
+
+.demo-link {
+  background: orange;
+  color: #030303;
+}
+
+.external-list::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  background: #ffffff9e;
+  top: -5px;
+  left: -30px;
+  transform: rotate(-15deg);
+  transition: all 0.2s;
+}
+
+.external-list:hover::after {
+  left: 110%;
+}
+
+.languages {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.technologies-used {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.banner {
+  list-style-type: none;
+  padding: 7px;
+  display: inline-block;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.html5 {
+  background-color: #e34c26;
+  color: white;
+}
+.css3 {
+  background-color: #1572b6;
+  color: white;
+}
+.java {
+  background-color: #007396;
+  color: white;
+}
+.js {
+  background-color: #f7df1e;
+  color: black;
+}
+.node {
+  background-color: #68a063;
+  color: white;
+}
+.php {
+  background-color: #777bb4;
+  color: white;
+}
+.python {
+  background-color: #4b8bbe;
+  color: white;
+}
+.bootstrap {
+  background-color: #563d7c;
+  color: white;
+}
+.react {
+  background-color: #61dafb;
+  color: black;
+}
+.mongodb {
+  background-color: #4db33d;
+  color: white;
+}
+.django {
+  background-color: #092e20;
+  color: white;
+}
+.flask {
+  background-color: #000000;
+  color: white;
+}
+.jupyter {
+  background-color: #f37626;
+  color: white;
+}
+
+@media screen and (max-width: 650px) {
+  .project-card {
+    max-width: calc(100% - 20px);
+    flex-direction: column;
+  }
+  .card-image {
+    max-width: calc(100%);
+  }
+
+  .card-content {
+    max-width: calc(100%);
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .project-card {
+    max-width: calc(100%);
+  }
+
+  .card-image {
+    max-width: calc(100%);
+  }
+
+  .detail label {
+    min-width: 150px;
+  }
+
+  .technologies-used {
+    justify-content: space-around;
+  }
+}

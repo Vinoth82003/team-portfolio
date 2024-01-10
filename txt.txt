@@ -1,0 +1,7 @@
+tharun 
+    -person detection (ml)
+    -simple voice assistent
+    -face recognition
+    -maleware detection (ml)
+    -jupitor
+    -pycham

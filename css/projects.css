@@ -19,12 +19,15 @@ a {
   flex-wrap: wrap;
 }
 
-.project-card {
-  padding: 10px;
+.header {
   min-width: 300px;
   max-width: calc(100vw - 10px);
   display: flex;
   border-radius: 5px;
+}
+
+.project-card {
+  padding: 10px;
   overflow: hidden;
   background: #fff;
   width: 600px;
@@ -61,6 +64,7 @@ a {
 .description {
   width: 100%;
   margin-top: 7px;
+  min-height: 130px;
 }
 
 .detail {
@@ -183,10 +187,17 @@ a {
 }
 
 @media screen and (max-width: 650px) {
-  .project-card {
+  .header {
     max-width: calc(100% - 20px);
     flex-direction: column;
   }
+
+  .description {
+    width: 100%;
+    margin-top: 7px;
+    min-height: 80px;
+  }
+
   .card-image {
     max-width: calc(100%);
   }
@@ -197,7 +208,7 @@ a {
 }
 
 @media screen and (max-width: 425px) {
-  .project-card {
+  .header {
     max-width: calc(100%);
   }
 

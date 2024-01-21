@@ -11,8 +11,9 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/style.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> -->
   </head>
-  <body>
+  <body id="particlejs">
     <nav class="nav-bar">
       <div class="logo-image">
         <img src="assets/icons/logo.png" alt="logo" class="image" />
@@ -177,16 +178,6 @@
           </li>
         </ul>
       </div>
-      <div class="inner-section content-container">
-        <h1 class="title">Our Team</h1>
-        <h3 class="team-name">Team Name</h3>
-        <p class="moto">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. At
-          accusantium, sequi porro debitis tempore tempora, cum illum a iste
-          consequuntur sit. Eius cupiditate illo, nihil debitis ab aperiam
-          consequuntur ipsam.
-        </p>
-      </div>
     </section>
 
     <link rel="stylesheet" href="css/projects.css" />
@@ -346,5 +337,117 @@
         </li>
       </ul>
     </section>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+      let classNAme = document.querySelector(".inner-section");
+      console.log(classNAme.className);
+      document.addEventListener("DOMContentLoaded", function () {
+        particlesJS("particlejs", {
+          particles: {
+            number: {
+              value: 80,
+              density: {
+                enable: true,
+                value_area: 800,
+              },
+            },
+            color: {
+              value: "#FF0000",
+            },
+            shape: {
+              type: "circle",
+              stroke: {
+                width: 0,
+                color: "#000000",
+              },
+              polygon: {
+                nb_sides: 5,
+              },
+            },
+            opacity: {
+              value: 0.5,
+              random: false,
+              anim: {
+                enable: false,
+                speed: 1,
+                opacity_min: 0.1,
+                sync: false,
+              },
+            },
+            size: {
+              value: 3,
+              random: true,
+              anim: {
+                enable: false,
+                speed: 40,
+                size_min: 0.1,
+                sync: false,
+              },
+            },
+            line_linked: {
+              enable: true,
+              distance: 150,
+              color: "#0000ff",
+              opacity: 0.4,
+              width: 1,
+            },
+            move: {
+              enable: true,
+              speed: 6,
+              direction: "none",
+              random: false,
+              straight: false,
+              out_mode: "out",
+              bounce: false,
+              attract: {
+                enable: false,
+                rotateX: 600,
+                rotateY: 1200,
+              },
+            },
+          },
+          interactivity: {
+            detect_on: "canvas",
+            events: {
+              onhover: {
+                enable: true,
+                mode: "repulse",
+              },
+              onclick: {
+                enable: true,
+                mode: "push",
+              },
+              resize: true,
+            },
+            modes: {
+              grab: {
+                distance: 400,
+                line_linked: {
+                  opacity: 1,
+                },
+              },
+              bubble: {
+                distance: 400,
+                size: 40,
+                duration: 2,
+                opacity: 8,
+                speed: 3,
+              },
+              repulse: {
+                distance: 200,
+                duration: 0.4,
+              },
+              push: {
+                particles_nb: 4,
+              },
+              remove: {
+                particles_nb: 2,
+              },
+            },
+          },
+          retina_detect: true,
+        });
+      });
+    </script>
   </body>
 </html>

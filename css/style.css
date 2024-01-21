@@ -44,7 +44,7 @@ body {
   gap: 5px;
   padding: 10px 15px;
   border-radius: 5px;
-  background: #ddd;
+  background: transparent;
   color: black;
   text-transform: capitalize;
   text-decoration: none;
@@ -63,7 +63,7 @@ body {
 }
 
 .inner-section {
-  width: 50%;
+  width: 100vw;
   height: 100%;
   display: flex;
   align-items: center;
@@ -75,8 +75,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   height: 100%;
-  position: relative;
-  background: #ddd;
+  position: absolute;
   /* background: #67ffd9; */
   align-items: center;
   justify-content: center;
@@ -391,11 +390,12 @@ body {
   line-height: 1.5;
 }
 
-@media screen and (max-width: 427px) {
+@media screen and (max-width: 655px) {
   .team {
     max-width: 100%;
     display: flex;
     flex-direction: column;
+    height: 100vh;
   }
 
   .inner-section {
@@ -466,6 +466,10 @@ body {
   .social-icon {
     height: 100%;
     top: 0;
+  }
+
+  .projects {
+    margin-top: 650px;
   }
 }
 
